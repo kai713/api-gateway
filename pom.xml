@@ -31,6 +31,16 @@
         <spring-cloud.version>2023.0.3</spring-cloud.version>
     </properties>
     <dependencies>
+        <!--dependency for resilience4j-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+        </dependency>
+        <!--Spring Boot Actuator that provides us with useful endpoints to get useful information about our application like Metrics, we can make use of these endpoints to check the state of the Resilience4J Circuit Breaker.-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <!--dependency for springdoc-openapi swagger-->
         <dependency>
             <groupId>org.springdoc</groupId>
